@@ -1,0 +1,45 @@
+NAME
+    WWW::Page::Host - return a uniform name for virtual hosts
+
+SYNOPSIS
+        use WWW::Page::Host;
+        print get_host('http://www.apple.com/');
+
+DESCRIPTION
+    The WWW::Page::Host module tries to return a canonicalish name for a
+    virtual host. It uses DNS to accomplish this.
+
+    This has its uses (or at least it must since the boss asked for a
+    program that does something like this).
+
+EXPORTED FUNCTIONS
+    my $canon = get_host($url);
+        Given a URL (either a string or a URI::URL object), this
+        function plays around with a DNS resolver to try to get to a
+        reasonably canonical name for the domain of the given URL.
+
+AUTHOR
+        Iain Truskett <spoon@cpan.org> <http://eh.org/~koschei/>
+
+        Please report any bugs, or post any suggestions, to either the
+        mailing list at <perl-www@dellah.anu.edu.au> (email
+        <perl-www-subscribe@dellah.anu.edu.au> to subscribe) or directly
+        to the author at <spoon@cpan.org>
+
+PLANS
+        It needs to cater for more weird and unusual ways of putting
+        dates on web pages.
+
+COPYRIGHT
+        Copyright (c) 2001 Iain Truskett. All rights reserved. This
+        program is free software; you can redistribute it and/or modify
+        it under the same terms as Perl itself.
+
+            $Id: Host.pm,v 1.2 2002/02/03 13:57:10 koschei Exp $
+
+ACKNOWLEDGEMENTS
+        I would like to thank GRF for having me write this.
+
+SEE ALSO
+        Um.
+

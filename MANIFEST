@@ -2,3 +2,4 @@ MANIFEST
 Makefile.PL
 lib/WWW/Page/Host.pm
 t/parse.t
+README
